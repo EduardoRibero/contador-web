@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            background-color: rgb(228, 194, 82);
+            display: grid;
+            place-items: center;
+        }
+
+        section{
+            border: 5px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        p{
+            font-size: 100px;
+        }
+    </style>
+    <title>Meu contador</title>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="diminuir()">Diminuir</button>
+        <button onclick="aumentar()">Aumentar</button>
+    </section>
+
+    <script>
+        let numero =0
+        const p = document.querySelector('p')
+        function aumentar(){
+            numero++
+            p.innerText = numero
+        }
+        function diminuir(){
+            numero--
+            p.innerText = numero
+        }
+    </script>
+</body>
+</html>
